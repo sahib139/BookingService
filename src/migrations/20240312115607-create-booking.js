@@ -21,6 +21,7 @@ module.exports = {
         type: Sequelize.ENUM,
         defaultValue:"InProcess",
         values : ["InProcess","Cancelled","Booked"],
+        allowNull:false,
       },
       createdAt: {
         allowNull: false,
