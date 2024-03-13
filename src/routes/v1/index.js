@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const {FlightBooking}=require();
+const FlightBooking=require("./booking");
 
 router.use(FlightBooking);
 
