@@ -1,11 +1,11 @@
 const {BookingService} = require("../services/index");
 const {StatusCodes} = require("http-status-codes");
 
-const userService = new BookingService();
+const bookingService = new BookingService();
 
 const create = async (req,res)=>{
     try {
-        const booking = await userService.create(req.body);
+        const booking = await bookingService.create(req.body);
         return res.status(StatusCodes.CREATED).json({
             data:booking,
             success:true,
