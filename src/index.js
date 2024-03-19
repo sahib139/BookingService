@@ -39,10 +39,6 @@ const setUpAndStartServer= async ()=>{
     
     app.use('/api',ApiRoutes); 
     app.use('/bookingService/api',ApiRoutes);
-
-    if(DB_SYNC==true){
-        await db.sequelize.sync({alter:true});
-    }
     
     await CreateChannel();
     
